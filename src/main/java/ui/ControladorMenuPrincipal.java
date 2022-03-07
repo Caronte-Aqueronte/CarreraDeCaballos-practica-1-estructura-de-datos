@@ -56,9 +56,11 @@ public class ControladorMenuPrincipal extends Controlador {
         //creamos un JFileChoooser que es la ventanan que deja al ususario elegir el archivo
         JFileChooser filechooser = new JFileChooser();
         //creamos el filtro de txt
-        //   FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.TXT", "txt");
+        FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.TXT", "txt");
+        FileNameExtensionFilter filtro2 = new FileNameExtensionFilter("*.CSV", "csv");
         //anadimos el filtro al jfilechoooser
-        //  filechooser.setFileFilter(filtro);
+         filechooser.setFileFilter(filtro);
+         filechooser.setFileFilter(filtro2);
         //eliminamos la opcion todos los archivos delJFileChooser
         filechooser.setAcceptAllFileFilterUsed(false);
         //abrimos el filechosssr
